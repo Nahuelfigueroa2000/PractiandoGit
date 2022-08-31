@@ -6,7 +6,8 @@ function App() {
   const [name,setName] = useState();
 
   function click(event){
-    
+    setName("NAHUEL");
+    event.preventDefault();
   }
 
 
@@ -16,6 +17,7 @@ function App() {
         <button onClick={click}>
           createCard
         </button>
+        <h1>{name}</h1>
       </header>
     </div>
   );
