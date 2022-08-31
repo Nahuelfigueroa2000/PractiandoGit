@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React , {useState} from 'react';
+import  Cards from "./components/crads"
 
 function App() {
   const [name,setName] = useState();
