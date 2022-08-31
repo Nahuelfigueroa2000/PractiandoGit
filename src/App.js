@@ -10,7 +10,6 @@ function App() {
     event.preventDefault();
   }
 
-
   return (
     <div className="App">
       <header className="App-header">
