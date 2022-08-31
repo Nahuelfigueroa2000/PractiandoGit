@@ -18,6 +18,7 @@ function App() {
           createCard
         </button>
         <h1>{name}</h1>
+        <Cards name={name}></Cards>
       </header>
     </div>
   );
