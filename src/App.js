@@ -7,7 +7,7 @@ function App() {
   const [name,setName] = useState();
 
   function click(event){
-    setName("NAHUEL");
+    setName(prompt(""));
     event.preventDefault();
   }
 
