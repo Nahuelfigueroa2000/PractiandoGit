@@ -5,10 +5,10 @@ import  Cards from "./components/crads"
 
 function App() {
   const [name,setName] = useState();
-
+  const [lol,lolset] = useState([]);//forma de  hacer un estado.
   function click(event){
     setName(prompt(""));
-    event.preventDefault();
+    event.preventDefault();  
   }
 
   return (
