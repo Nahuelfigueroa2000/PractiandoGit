@@ -5,9 +5,12 @@ import  Cards from "./components/crads"
 
 function App() {
   const [name,setName] = useState();
-  const [lol,lolset] = useState([]);//forma de  hacer un estado.
+  const [cards,setCards] = useState([]);//forma de  hacer un estado.
   function click(event){
-    setName(prompt(""));
+    var names= prompt("");
+    var newCards= cards;
+    setName(names);
+    setCards(newCards.push(names));
     event.preventDefault();  
   }
 
