@@ -9,8 +9,10 @@ function App() {
   function click(event){
     var names= prompt("");
     var newCards= cards;
+
     setName(names);
     setCards(newCards.push(names));
+
     event.preventDefault();  
   }
 
@@ -22,6 +24,9 @@ function App() {
         </button>
         <h1>{name}</h1>
         <Cards name={name}></Cards>
+        {
+          cards.map(names => (<Cards name={name}></Cards>))
+        }
       </header>
     </div>
   );
