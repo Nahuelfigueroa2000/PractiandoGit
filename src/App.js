@@ -1,38 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-import React , {useState} from 'react';
-import  Cards from "./components/crads"
+import "./App.css";
+import React, { useState } from "react";
+import Cards from "./components/crads";
 
 function App() {
-  const [name,setName] = useState();
-  const [cards,setCards] = useState([]);//forma de  hacer un estado.
-  function click(event){
-    var names= prompt("");
-    var newCards= cards;
+  const [cardNames, setCardNames] = useState([]); //forma de  hacer un estado.
+  function click(event) {
+    let names = prompt("");
 
-    setName(names);
-    setCards(newCards.push(names));
+    setCardNames([...cardNames, names]);
 
-    event.preventDefault();  
+    event.preventDefault();
   }
 
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={click}>
-          createCard
-        </button>
-        <h1>{name}</h1>
-        <Cards name={name}></Cards>
-        {
-          cards.map(names => (<Cards name={name}></Cards>))
-        }
+        <button onClick={click}>createCard</button>
+
+        {cardNames?.map(function (value) {
+          console.log(value);
+          return <Cards name={value} />;
+        })}
       </header>
     </div>
   );
 }
-
-
-
 
 export default App;
