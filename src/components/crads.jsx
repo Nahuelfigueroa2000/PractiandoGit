@@ -6,6 +6,17 @@ export default function Cards({name}){
             <h3 className={style.title}>
                 hello {name},how are you?
             </h3>
+            <button>
+                How Old Are You
+            </button>
+            
+            <HowOldAreYou age={"20"}></HowOldAreYou>
         </div>
+    )
+}
+
+function HowOldAreYou(props){
+    return(
+        <h4>my age is, {props.age}</h4>
     )
 }
