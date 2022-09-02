@@ -8,8 +8,13 @@ export default function Cards({name}){
 
     const [age,setAge] = useState(0);
 
-    function PushTheButton(event){
+    function addYearToAge(event){
         setAge(age + 1);
+        event.preventDefault();
+    }
+
+    function subtractYearToAge(event){
+        setAge(age - 1);
         event.preventDefault();
     }
 
@@ -17,13 +22,17 @@ export default function Cards({name}){
         
         <div className={style.body}>
             <h3 className={style.title}>
-                hello {name},how are you?
+                Hello {name}, how are you?
             </h3>
-            <button onClick={PushTheButton}>
-                How Old Are You
-            </button>
-            <HowOldAreYou age ={age}></HowOldAreYou>
-            
+            <div className={style.buttonsCard}>
+                <button onClick={addYearToAge}>
+                    Add one year
+                </button>
+                <button onClick={subtractYearToAge}>
+                    Subtract one year
+                </button>
+            </div>
+            <HowOldAreYou age ={age}/>
         </div>
     )
 }
