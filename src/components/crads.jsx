@@ -23,6 +23,7 @@ export default function Cards({name}){
                 How Old Are You
             </button>
             <HowOldAreYou age ={age}></HowOldAreYou>
+            
         </div>
     )
 }

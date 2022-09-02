@@ -1,9 +1,15 @@
 .body{
-    background-color: brown;
-    border-radius: 20px;
-    padding: 1rem;
+    background-color: rgb(50, 55, 95);
+    border-radius: 5px;
+    padding: 5px;
+    border: aqua 2px solid;
+    margin: 5px;
+    width: 23rem;
+    height: 23rem;
 }
 
 .title{
     color: blanchedalmond;
 }
+
+.p{color : red;}
